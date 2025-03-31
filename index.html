@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oualid Clicker</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #cfc5c5;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .click-image {
+            position: absolute;
+            width: 200px;
+            transition: all 0.2s ease;
+        }
+
+        h1 {
+            color: black;
+        }
+    </style>
+        <link href="oualid_clicker.jpeg" rel="shortcut icon" type="image/x-icon">
+
+    </head>
+<body>
+    <img id="templateImage" src="oualid_clicker.jpeg" alt="Click Image" style="display:none;">
+
+    <h1>PRESS SPACE BAR TO ADMIRE OUALID</h1>
+
+    <script>
+        document.addEventListener("keydown", (event) => {
+            if (event.code === "Space") {
+                const image = document.getElementById("templateImage").cloneNode(true);
+                image.style.display = "block";
+                image.classList.add("click-image");
+                
+                const randomX = Math.floor(Math.random() * (window.innerWidth - 100));
+                const randomY = Math.floor(Math.random() * (window.innerHeight - 100));
+                
+                image.style.left = `${randomX}px`;
+                image.style.top = `${randomY}px`;
+                
+                document.body.appendChild(image);
+            }
+        });
+    </script>
+</body>
+</html>
