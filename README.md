@@ -5,7 +5,7 @@
 
 ---
 
-## i made this during "le cours de communication" because it was a bit boring
+## i made this during "le cours de communication in 5 minutes" because it was a bit boring
 
 ---
 
